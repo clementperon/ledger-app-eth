@@ -2703,15 +2703,7 @@ __attribute__((section(".boot"))) int main(int arg0) {
     // exit critical section
     __asm volatile("cpsie i");
 
-    if (arg0) {
-        if (((unsigned int *)arg0)[0] != 0x100) {
-            os_lib_throw(INVALID_PARAMETER);
-        }
-        chainConfig = (chain_config_t *)((unsigned int *)arg0)[1];
-    }
-    else {
-        chainConfig = (chain_config_t *)PIC(&C_chain_config);
-    }
+    chainConfig = (chain_config_t *)PIC(&C_chain_config);
 
     os_memset(&txContext, 0, sizeof(txContext));
 
