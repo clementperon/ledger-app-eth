@@ -2108,15 +2108,6 @@ void handleGetPublicKey(uint8_t p1, uint8_t p2, uint8_t *dataBuffer, uint16_t da
 #ifndef NO_CONSENT
   else
   {
-    /*
-    addressSummary[0] = '0';
-    addressSummary[1] = 'x';
-    os_memmove((unsigned char *)(addressSummary + 2), tmpCtx.publicKeyContext.address, 4);
-    os_memmove((unsigned char *)(addressSummary + 6), "...", 3);
-    os_memmove((unsigned char *)(addressSummary + 9), tmpCtx.publicKeyContext.address + 40 - 4, 4);
-    addressSummary[13] = '\0';
-    */
-
     // prepare for a UI based reply
 #if defined(TARGET_BLUE)
     snprintf(strings.common.fullAddress, sizeof(strings.common.fullAddress), "0x%.*s", 40, tmpCtx.publicKeyContext.address);
@@ -2191,14 +2182,6 @@ void finalizeParsing(bool direct) {
   // Add address
   if (tmpContent.txContent.destinationLength != 0) {
     getEthAddressStringFromBinary(tmpContent.txContent.destination, address, &sha3);
-    /*
-    addressSummary[0] = '0';
-    addressSummary[1] = 'x';
-    os_memmove((unsigned char *)(addressSummary + 2), address, 4);
-    os_memmove((unsigned char *)(addressSummary + 6), "...", 3);
-    os_memmove((unsigned char *)(addressSummary + 9), address + 40 - 4, 4);
-    addressSummary[13] = '\0';
-    */
 
     strings.common.fullAddress[0] = '0';
     strings.common.fullAddress[1] = 'x';
@@ -2505,11 +2488,6 @@ void handleApdu(volatile unsigned int *flags, volatile unsigned int *tx) {
           handleSignPersonalMessage(G_io_apdu_buffer[OFFSET_P1], G_io_apdu_buffer[OFFSET_P2], G_io_apdu_buffer + OFFSET_CDATA, G_io_apdu_buffer[OFFSET_LC], flags, tx);
           break;
 
-#if 0
-        case 0xFF: // return to dashboard
-          goto return_to_dashboard;
-#endif
-
         default:
           THROW(0x6D00);
           break;
@@ -2608,7 +2586,6 @@ void sample_main(void) {
         END_TRY;
     }
 
-//return_to_dashboard:
     return;
 }
 
