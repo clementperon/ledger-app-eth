@@ -1,0 +1,5 @@
+# Get Public key
+./getPublicKey.py --path "44'/401697'"
+
+# Signature example
+./signTx.py --path "44'/401697'" --amount 0.1 --to 0x70ab1d3b13b409c30d12c8b3b51e4f0fa5cb6222 --gasprice 0 --nonce 
