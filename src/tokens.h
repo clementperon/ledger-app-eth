@@ -52,28 +52,6 @@ typedef struct tokenDefinition_t {
 #define NUM_TOKENS_TOMOCHAIN 0
 #define NUM_TOKENS_TOBALABA 0
 
-extern tokenDefinition_t const TOKENS_AKROMA[NUM_TOKENS_AKROMA];
-extern tokenDefinition_t const TOKENS_ELLAISM[NUM_TOKENS_ELLAISM];
-extern tokenDefinition_t const TOKENS_ETHEREUM[NUM_TOKENS_ETHEREUM];
-extern tokenDefinition_t const TOKENS_ETHEREUM_CLASSIC[NUM_TOKENS_ETHEREUM_CLASSIC];
-extern tokenDefinition_t const TOKENS_ETHERSOCIAL[NUM_TOKENS_ETHERSOCIAL];
-extern tokenDefinition_t const TOKENS_ETHER1[NUM_TOKENS_ETHER1];
-extern tokenDefinition_t const TOKENS_PIRL[NUM_TOKENS_PIRL];
-extern tokenDefinition_t const TOKENS_POA[NUM_TOKENS_POA];
-extern tokenDefinition_t const TOKENS_RSK[NUM_TOKENS_RSK];
-extern tokenDefinition_t const TOKENS_UBIQ[NUM_TOKENS_UBIQ];
-extern tokenDefinition_t const TOKENS_EXPANSE[NUM_TOKENS_EXPANSE];
-extern tokenDefinition_t const TOKENS_WANCHAIN[NUM_TOKENS_WANCHAIN];
-extern tokenDefinition_t const TOKENS_KUSD[NUM_TOKENS_KUSD];
-extern tokenDefinition_t const TOKENS_MUSICOIN[NUM_TOKENS_MUSICOIN];
-extern tokenDefinition_t const TOKENS_CALLISTO[NUM_TOKENS_CALLISTO];
-extern tokenDefinition_t const TOKENS_ETHERGEM[NUM_TOKENS_ETHERGEM];
-extern tokenDefinition_t const TOKENS_ATHEIOS[NUM_TOKENS_ATHEIOS];
-extern tokenDefinition_t const TOKENS_GOCHAIN[NUM_TOKENS_GOCHAIN];
-extern tokenDefinition_t const TOKENS_MIX[NUM_TOKENS_MIX];
-extern tokenDefinition_t const TOKENS_REOSC[NUM_TOKENS_REOSC];
-extern tokenDefinition_t const TOKENS_HPB[NUM_TOKENS_HPB];
-extern tokenDefinition_t const TOKENS_TOMOCHAIN[NUM_TOKENS_TOMOCHAIN];
 extern tokenDefinition_t const TOKENS_TOBALABA[NUM_TOKENS_TOBALABA];
 
 #endif
