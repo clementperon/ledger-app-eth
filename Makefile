@@ -23,6 +23,8 @@ include $(BOLOS_SDK)/Makefile.defines
 APP_LOAD_PARAMS= --curve secp256k1 $(COMMON_LOAD_PARAMS)
 # Allow the app to use path 45 for multi-sig (see BIP45).
 APP_LOAD_PARAMS += --path "45'"
+APP_LOAD_FLAGS= --appFlags 0x340
+
 
 APPVERSION_M=1
 APPVERSION_N=2
@@ -42,6 +44,8 @@ ifeq ($(filter clean,$(MAKECMDGOALS)),)
 $(error Unsupported CHAIN - use tobalaba)
 endif
 endif
+
+APP_LOAD_PARAMS += $(APP_LOAD_FLAGS) --path "44'/1'"
 
 ################
 # Default rule #
