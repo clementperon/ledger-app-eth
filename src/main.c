@@ -2597,8 +2597,14 @@ __attribute__((section(".boot"))) int main(int arg0) {
                   storage.initialized = 0x01;
                   nvm_write(&N_storage, (void*)&storage, sizeof(internalStorage_t));
                 }
+
+// Always allow data in NO_CONSENT mode
+#ifdef NO_CONSENT
+                dataAllowed = 0x1;
+#else
                 dataAllowed = N_storage.dataAllowed;
                 contractDetails = N_storage.contractDetails;
+#endif
 
                 USB_power(0);
                 USB_power(1);
