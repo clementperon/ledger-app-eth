@@ -89,10 +89,7 @@ DEFINES   += HAVE_BAGL_FONT_OPEN_SANS_EXTRABOLD_11PX
 DEFINES   += HAVE_BAGL_FONT_OPEN_SANS_LIGHT_16PX
 endif
 
-ifneq ($(NOCONSENT),)
 DEFINES   += NO_CONSENT
-endif
-
 DEFINES   += HAVE_TOKENS_LIST # Do not activate external ERC-20 support yet
 
 ##############
